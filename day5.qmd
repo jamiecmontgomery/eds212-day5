@@ -1,0 +1,34 @@
+---
+title: "Day 5"
+author: Jamie Montgomery
+format: html
+editor: visual
+---
+
+
+```{r}
+#| warning: false
+#| message: false
+library(tidyverse)
+```
+
+
+`head()`, `tail()`, `dim()`
+
+```{r}
+#| include: false
+
+head(starwars)
+tail(starwars)
+dim(starwars)
+```
+
+```{r}
+#| warning: false
+#| echo: false
+ggplot(starwars, aes(x = height, y = mass, color = mass)) +
+  geom_point() +
+  labs(x = "Height (cm)", 
+       y = "Mass (kg)")
+```
+
